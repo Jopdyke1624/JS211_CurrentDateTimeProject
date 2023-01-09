@@ -13,21 +13,17 @@ const displayDate = () => {
 };
 
 // Write a JavaScript program to convert a number to a string.
-let x = 12;
-let y = 13;
-
-console.log(typeof x.toString());
-console.log(typeof y.toString());
-
-document.getElementById("result").innerHTML = typeof x.toString();
-
+const string = (x) => {
+  return console.log(typeof x.toString());
+};
+string(5);
 // Write a JavaScript program to convert a string to the number.
 
-let a = parseInt("1.00");
-let b = parseInt("100");
+const toNumber = (x) => {
+  return console.log(typeof Number("x"))
+}
+toNumber("5")
 
-console.log(typeof a);
-console.log(typeof b);
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
 // * Boolean
 // * Null
@@ -35,33 +31,55 @@ console.log(typeof b);
 // * Number
 // * NaN
 // * String
-
-if (typeof a === "boolean") {
-  console.log("Boolean");
-} else if (typeof a === "number") {
-  console.log("Number");
-} else if (typeof a === "null") {
-  console.log("Null");
-} else if (typeof a === "undefined") {
-  console.log("Undefined");
-} else if (typeof a === "NaN") {
-  console.log("NaN");
-} else {
-  console.log("String");
-}
+const dataType = (x) => {
+  return console.log(typeof x);
+};
+dataType(true);
+dataType("true");
+dataType(null);
+dataType();
+dataType(5);
+dataType(Number("123x"));
+console.log(isNaN("123x"));
 
 // Write a JavaScript program that adds 2 numbers together.
-function add() {
-  let result = a + b;
-  return result;
-}
-console.log(add());
+const addNumbers = (x, y) => {
+  const add = x + y;
+  return add;
+};
+console.log(addNumbers(5, 5));
 
 // Write a JavaScript program that runs only when 2 things are true.
 
+const twoTrue = (x, y) => {
+  if (x && y) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(twoTrue(true, true));
+
 // Write a JavaScript program that runs when 1 of 2 things are true.
+const oneTrue = (x, y) => {
+  if (x || y) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(oneTrue(true, false));
 
 // Write a JavaScript program that runs when both things are not true.
+const noneTrue = (x, y) => {
+  if (!x && !y) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(noneTrue(false, false));
 
 // ***************************
 //         PART TWO
